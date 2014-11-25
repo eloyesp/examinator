@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+OUTPUT="examenes/primero_diciembre-marzo.html" 
+
+pandoc -o $OUTPUT \
+  --to html5 \
+  --from markdown \
+  --standalone \
+  --css "layout.css" \
+  examenes/primero_diciembre-marzo.html.md.erb
+
+firefox $OUTPUT
