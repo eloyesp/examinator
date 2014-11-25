@@ -1,7 +1,6 @@
 # config.ru
+require_relative 'app'
 
 use Rack::Reloader
-
-require_relative 'app'
 
 run App.new
